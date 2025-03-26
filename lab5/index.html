@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script>
+  function tree(n) {
+    printTreeTop(n);
+    printTreeBottom(n);
+  }
+
+  function printTreeTop(n) {
+    for (let i = 0; i < n; i++) {
+      let space = repeatchar(n - i - 1, ' ');
+      let star = repeatchar(2 * i + 1, '*');
+      console.log(space + star);
+    }
+  }
+
+  function printTreeBottom(n) {
+    let space = repeatchar(n - 1, ' ');
+    console.log(space + '*');
+  }
+
+  function repeatchar(n, arg_char) {
+    if (n <= 0) {
+      return '';
+    } else {
+      return arg_char + repeatchar(n - 1, arg_char);
+    }
+  }
+
+  tree(5);
+</script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
