@@ -11,11 +11,13 @@ window.addEventListener("keyup", function(e) {
     const randomChars =       addNewChar(Math.floor(Math.random() * (3-1+1))+1);
     container.textContent += randomChars;
   }
-  else if (e.key === 'Escape') {
+  if (e.key === 'Escape') {
   container.textContent = "";
   }
-  else if(e.key===container.textContent.charAt(0)){
-    container.textContent = container.textContent.slice(1)
+  if(e.key===container.textContent.charAt(0)){
+    container.textContent = container.textContent.slice(1);
+    const randomChars =       addNewChar(Math.floor(Math.random() * (3-1+1))+1);
+    container.textContent += randomChars;
   }
  
   
