@@ -12,6 +12,10 @@ const changeText = (event) => {
 const Mutbutton2 = (nums) => {
     var output=[];
     output.push( <IconButton color="primary" aria-label="add to shopping cart"><AddShoppingCartIcon /></IconButton>)
+    output.push(<IconButton color="primary" aria-label="delete">
+  <DeleteIcon /></IconButton>)
+  output.push(<IconButton color="primary" aria-label="add an alarm">
+  <AlarmIcon /></IconButton>)
     return output;
   };
 
